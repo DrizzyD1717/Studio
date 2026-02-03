@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import Link from "next/link";
 
 // Types
 type Category = "All" | "Development" | "Design" | "Photography";
@@ -108,21 +109,23 @@ const Portfolio: React.FC = () => {
                 className="group relative aspect-square overflow-hidden rounded-3xl bg-brand-border/50 border border-brand-border"
               >
                 {/* Image Placeholder - Replace with <Image /> from next/image later */}
-                <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                <div className="cursor-pointer absolute inset-0 bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
                   <span className="text-brand-gray/30 font-bold uppercase">
                     {project.category}
                   </span>
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                  <p className="text-brand-accent text-sm font-bold uppercase tracking-widest mb-2">
-                    {project.category}
-                  </p>
-                  <h4 className="text-2xl font-bold text-white">
-                    {project.title}
-                  </h4>
-                </div>
+                <Link href={`/services/${project.category.toLowerCase()}`}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <p className="text-brand-accent text-sm font-bold uppercase tracking-widest mb-2">
+                      {project.category}
+                    </p>
+                    <h4 className="text-2xl font-bold text-white">
+                      {project.title}
+                    </h4>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>

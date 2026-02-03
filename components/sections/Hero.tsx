@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   // Animation variants for cleaner code
@@ -83,12 +84,16 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 mt-12"
         >
-          <button className="h-14 px-10 rounded-full bg-brand-white text-brand-black font-bold hover:scale-105 active:scale-95 transition-all duration-300">
-            Start a Project
-          </button>
-          <button className="h-14 px-10 rounded-full border border-brand-border bg-transparent text-brand-white font-bold hover:bg-brand-white/5 hover:border-brand-gray transition-all duration-300">
-            View Portfolio
-          </button>
+          <Link href="/contact">
+            <button className="h-14 px-10 rounded-full bg-brand-white text-brand-black font-bold hover:scale-105 active:scale-95 transition-all duration-300">
+              Start a Project
+            </button>
+          </Link>
+          <Link href="/portfolio">
+            <button className="h-14 px-10 rounded-full border border-brand-border bg-transparent text-brand-white font-bold hover:bg-brand-white/5 hover:border-brand-gray transition-all duration-300">
+              View Portfolio
+            </button>
+          </Link>
         </motion.div>
 
         {/* Visual Preview / Showcase Placeholder */}
