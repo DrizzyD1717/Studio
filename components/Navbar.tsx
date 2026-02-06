@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold tracking-tighter">
-            STUDIO<span className="text-brand-accent">.</span>
+            AUREOO<span className="text-brand-accent">.</span>
           </Link>
 
           {/* Desktop Links */}

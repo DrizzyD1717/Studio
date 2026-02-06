@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 // Types
 type Category = "All" | "Development" | "Design" | "Photography";
@@ -18,37 +19,37 @@ const projects: Project[] = [
     id: 1,
     title: "E-Commerce Platform",
     category: "Development",
-    image: "/dev-1.jpg",
+    image: "/web1.png",
   },
   {
     id: 2,
     title: "Modern Brand Identity",
     category: "Design",
-    image: "/design-1.jpg",
+    image: "/design1.png",
   },
   {
     id: 3,
-    title: "Urban Street Shoot",
+    title: "Portrait",
     category: "Photography",
-    image: "/photo-1.jpg",
+    image: "/efe1.jpeg",
   },
   {
     id: 4,
-    title: "SaaS Dashboard UI",
+    title: "Landing Page",
     category: "Development",
-    image: "/dev-2.jpg",
+    image: "/web2.png",
   },
   {
     id: 5,
-    title: "Minimalist Logo Set",
+    title: "Modern Brand Identity",
     category: "Design",
-    image: "/design-2.jpg",
+    image: "/design2.png",
   },
   {
     id: 6,
-    title: "Wedding Highlights",
+    title: "portrait",
     category: "Photography",
-    image: "/photo-2.jpg",
+    image: "/efe4.jpg",
   },
 ];
 
@@ -109,11 +110,19 @@ const Portfolio: React.FC = () => {
                 className="group relative aspect-square overflow-hidden rounded-3xl bg-brand-border/50 border border-brand-border"
               >
                 {/* Image Placeholder - Replace with <Image /> from next/image later */}
-                <div className="cursor-pointer absolute inset-0 bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={600}
+                  className="w-full object-cover h-full"
+                ></Image>
+                {/* <div className="cursor-pointer absolute inset-0 bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
                   <span className="text-brand-gray/30 font-bold uppercase">
                     {project.category}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Overlay */}
                 <Link href={`/services/${project.category.toLowerCase()}`}>

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   // Animation variants for cleaner code
@@ -104,12 +105,19 @@ const Hero = () => {
           transition={{ delay: 1, duration: 1 }}
           className="mt-20 w-full max-w-6xl px-4"
         >
-          <div className="relative aspect-video rounded-2xl border border-brand-border bg-neutral-900/50 overflow-hidden shadow-[0_0_50px_-12px_rgba(99,102,241,0.2)]">
+          {/* <div className="relative aspect-video rounded-2xl border border-brand-border bg-neutral-900/50 overflow-hidden shadow-[0_0_50px_-12px_rgba(99,102,241,0.2)]">
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent z-10" />
             <div className="flex items-center justify-center h-full text-brand-gray/40 font-mono text-sm tracking-widest uppercase">
               Featured Work / Showreel
             </div>
-          </div>
+          </div> */}
+          <Image
+            src="/hero1.png"
+            alt="Featured Work"
+            width={1200}
+            height={900}
+            className="rounded-2xl border border-brand-border shadow-[0_0_50px_-12px_rgba(99,102,241,0.2)]"
+          />
         </motion.div>
       </motion.div>
     </section>

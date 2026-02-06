@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              STUDIO<span className="text-brand-accent">.</span>
+              AUREOO<span className="text-brand-accent">.</span>
             </Link>
             <p className="text-brand-gray text-sm leading-relaxed max-w-xs">
               Merging technical excellence with creative vision. Let&apos;s
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-brand-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-brand-gray text-xs">
-            © {currentYear} STUDIO. All rights reserved.
+            © {currentYear} AUREOO. All rights reserved.
           </p>
           <div className="flex gap-8">
             <Link

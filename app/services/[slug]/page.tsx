@@ -10,6 +10,7 @@ import {
   Image as LucideImage,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceData = {
   development: {
@@ -70,31 +71,31 @@ const allProjects = [
     id: 1,
     title: "E-Commerce Platform",
     category: "development",
-    image: "/dev-1.jpg",
+    image: "/web1.png",
   },
   {
     id: 2,
     title: "Modern Brand Identity",
     category: "design",
-    image: "/design-1.jpg",
+    image: "/design1.png",
   },
   {
     id: 3,
-    title: "Urban Street Shoot",
+    title: "Portrait Shoot",
     category: "photography",
-    image: "/photo-1.jpg",
+    image: "/efe1.jpeg",
   },
   {
     id: 4,
-    title: "SaaS Dashboard UI",
+    title: "Landing Page",
     category: "development",
-    image: "/dev-2.jpg",
+    image: "/web2.png",
   },
   {
     id: 5,
-    title: "Vogue Editorial",
+    title: "Portrait Shoot",
     category: "photography",
-    image: "/photo-1.jpg",
+    image: "/efe2.jpeg",
   },
   {
     id: 6,
@@ -286,9 +287,16 @@ const ServicePage = () => {
               >
                 <div className="relative aspect-[16/10] rounded-3xl overflow-hidden bg-brand-border border border-brand-border">
                   <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
-                    <span className="text-brand-gray/20 font-bold uppercase tracking-widest italic">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={600}
+                      height={600}
+                      className="w-full object-cover h-full object-top"
+                    ></Image>
+                    {/* <span className="text-brand-gray/20 font-bold uppercase tracking-widest italic">
                       Project Preview
-                    </span>
+                    </span> */}
                   </div>
                 </div>
                 <h3 className="mt-6 text-xl font-bold">{project.title}</h3>
